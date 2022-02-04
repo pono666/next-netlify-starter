@@ -10,7 +10,7 @@ window.onload = function() {
         let windowwidth = window.innerWidth /2;
         let width = scroller.clientWidth / 2;
         let wts =  width -  windowwidth;
-        if(animate){
+        if(animate === true){
             window.scrollTo({
                 top: hts,
                 left: wts,

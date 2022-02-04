@@ -38,7 +38,7 @@ body {
     text-shadow: 2px 2px 2px black;
     text-decoration: none;
 }
-.denglink:hover, .denglink:focus {
+.denglink:hover, .denglink:focus, .denglink:active {
     animation: deng 0.5s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;

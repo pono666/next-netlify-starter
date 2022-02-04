@@ -3,24 +3,24 @@ window.onload = function() {
     const originalAspect = scroller.width / scroller.height;
 
     const setPosition = (animate=false) =>{
-        window.onscroll = null;
+        //window.onscroll = null;
 
         //let aspectratio = 
 
         //const scroller = document.querySelector('.dengimage');
-        let windowheight = window.outerHeight;
+        let windowheight = window.innerHeight;
         let height = scroller.width ;
         
 
-        let windowwidth = window.outerWidth ;
+        let windowwidth = window.innerWidth ;
         let width = scroller.width ;
         
 
 
        // let aspectratio = width / height;
 
-           // width = windowwidth;
-           
+        width = windowwidth;
+        height = windowheight;
         let testHeight = windowwidth / originalAspect;
         console.log('testHeight', testHeight, windowheight)
        
@@ -45,15 +45,16 @@ window.onload = function() {
         let wts =  (width -  windowwidth) / 2;
         
         if(animate === true){
-            window.scrollTo({
+            document.querySelector('body').scrollTo({
                 top: hts,
                 left: wts,
                 behavior: 'smooth'
               })
         }else{
-            window.scrollTo(wts, hts, 'smooth');
+            document.querySelector('body').scrollTo(wts, hts, 'smooth');
         }
-        window.onscroll = resizeme;
+      //  window.onscroll = resizeme;
+
     }    
 
     setTimeout(setPosition,100);
@@ -68,5 +69,9 @@ window.onload = function() {
     }
     window.onscroll = resizeme;
     window.onresize = setPosition;
+    //scroller.onscroll = resizeme;
+    document.querySelector('body').addEventListener('scroll',resizeme);
+    
+
 
   };

@@ -44,15 +44,15 @@ window.onload = function() {
         let hts =  (height -  windowheight) / 2 ;
         let wts =  (width -  windowwidth) / 2;
         
-        if(animate === true){
+       // if(animate === true){
             document.querySelector('body').scrollTo({
                 top: hts,
                 left: wts,
                 behavior: 'smooth'
               })
-        }else{
-            document.querySelector('body').scrollTo(wts, hts, 'smooth');
-        }
+        //}else{
+        //    document.querySelector('body').scrollTo(wts, hts);
+       // }
       //  window.onscroll = resizeme;
 
     }    

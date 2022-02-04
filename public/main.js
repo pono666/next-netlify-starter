@@ -1,15 +1,35 @@
 window.onload = function() {
+    const scroller = document.querySelector('.dengimage');
+    const originalAspect = scroller.clientWidth / scroller.clientHeight;
 
     const setPosition = (animate=false) =>{
         window.onscroll = null;
-        const scroller = document.querySelector('.dengimage');
-        let windowheight = window.innerHeight /2;
-        let height = scroller.clientHeight / 2;
-        let hts =  height -  windowheight;
 
-        let windowwidth = window.innerWidth /2;
-        let width = scroller.clientWidth / 2;
-        let wts =  width -  windowwidth;
+        //let aspectratio = 
+
+        //const scroller = document.querySelector('.dengimage');
+        let windowheight = window.innerHeight;
+        let height = scroller.clientHeight ;
+        let hts =  (height -  windowheight) / 2 ;
+
+        let windowwidth = window.innerWidth ;
+        let width = scroller.clientWidth ;
+        let wts =  (width -  windowwidth) / 2;
+
+
+       // let aspectratio = width / height;
+
+            width = windowwidth;
+           
+        let testHeight = width / originalAspect
+       if(testHeight < windowheight){
+            height = windowheight;
+            width = height * originalAspect;
+       }
+
+        scroller.width = width;
+        scroller.innerHeight = height;
+        
         if(animate === true){
             window.scrollTo({
                 top: hts,

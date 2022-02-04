@@ -27,9 +27,54 @@ code {
 }
 
 .container {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
+
+.dengimage{
+    display: block;
+    min-width: 100%;
+    min-height:100%;
+    object-fit:contain;
+    object-position: center;
+
+}
+
+.denglink{
+    position: fixed;
+color: white;
+bottom: 20px;
+font-weight: bold;
+right: 20px;
+text-shadow: 2px 2px 2px black;
+text-decoration: none;
+}
+.denglink:hover {
+    animation: deng 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes deng {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }

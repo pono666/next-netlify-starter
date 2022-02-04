@@ -8,11 +8,11 @@ window.onload = function() {
         //let aspectratio = 
 
         //const scroller = document.querySelector('.dengimage');
-        let windowheight = window.innerHeight;
+        let windowheight = window.outerHeight;
         let height = scroller.width ;
         
 
-        let windowwidth = window.innerWidth ;
+        let windowwidth = window.outerWidth ;
         let width = scroller.width ;
         
 

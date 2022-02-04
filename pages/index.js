@@ -9,6 +9,7 @@ export default function Home() {
       <Head>
         <title>BYE BYE DENG</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
 
       <img className="dengimage" src="https://lh3.googleusercontent.com/RnMqPUyUCDy8hus5ElvqU5jOjGWEuw_q4t2LjRKJUEB-6K_YAYgRH_X9bWPRbCGEdSm9t2gafh_9xDNlBhvdOC6n-Y9Jj5HC0JysUWU=w600" />
